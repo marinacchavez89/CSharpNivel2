@@ -9,6 +9,8 @@ namespace dominio
 {
     public class Discos
     {
+        public int Id { get; set; }
+
         [DisplayName("Título")]
         public string Titulo { get; set; }
 
