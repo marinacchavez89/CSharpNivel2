@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio Final", "Desafio Final\Desafio Final.csproj", "{91788F81-A7CC-461C-BB20-2F0923244DB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dominio", "dominio\dominio.csproj", "{1292670A-60D1-495C-84EF-3A1BCA9398D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negocio", "negocio\negocio.csproj", "{131132F9-F2CF-40DF-A0B2-C4E1BB7C7725}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91788F81-A7CC-461C-BB20-2F0923244DB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91788F81-A7CC-461C-BB20-2F0923244DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91788F81-A7CC-461C-BB20-2F0923244DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91788F81-A7CC-461C-BB20-2F0923244DB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1292670A-60D1-495C-84EF-3A1BCA9398D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1292670A-60D1-495C-84EF-3A1BCA9398D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1292670A-60D1-495C-84EF-3A1BCA9398D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1292670A-60D1-495C-84EF-3A1BCA9398D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{131132F9-F2CF-40DF-A0B2-C4E1BB7C7725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{131132F9-F2CF-40DF-A0B2-C4E1BB7C7725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{131132F9-F2CF-40DF-A0B2-C4E1BB7C7725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{131132F9-F2CF-40DF-A0B2-C4E1BB7C7725}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A8AACBA-A22C-4C52-958F-B07473B70A9A}
+	EndGlobalSection
+EndGlobal

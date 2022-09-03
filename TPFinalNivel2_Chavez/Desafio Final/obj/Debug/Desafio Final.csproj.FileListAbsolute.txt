@@ -1,0 +1,18 @@
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\bin\Debug\Desafio Final.exe.config
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\bin\Debug\Desafio Final.exe
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\bin\Debug\Desafio Final.pdb
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\obj\Debug\Desafio Final.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\obj\Debug\Desafio Final.csproj.SuggestedBindingRedirects.cache
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\obj\Debug\Desafio_Final.frmArticulos.resources
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\obj\Debug\Desafio_Final.Properties.Resources.resources
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\obj\Debug\Desafio Final.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\obj\Debug\Desafio Final.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\obj\Debug\Desafio Final.exe
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\obj\Debug\Desafio Final.pdb
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\bin\Debug\dominio.dll
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\bin\Debug\dominio.pdb
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\obj\Debug\Desafio Final.csproj.CopyComplete
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\bin\Debug\negocio.dll
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\bin\Debug\negocio.pdb
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\obj\Debug\Desafio_Final.frmAltaArticulo.resources
+C:\Users\Usuario\Desktop\Curso C# Nivel 2\TPFinalNivel2_Chavez\Desafio Final\obj\Debug\Desafio_Final.frmDetalle.resources
