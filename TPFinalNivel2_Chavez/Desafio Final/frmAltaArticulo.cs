@@ -25,7 +25,7 @@ namespace Desafio_Final
         }
 
         public frmAltaArticulo(Articulo articulo)
-        {   
+        {
             InitializeComponent();
             this.articulo = articulo;
             Text = "Modificar artículo";
@@ -37,13 +37,13 @@ namespace Desafio_Final
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
-        {   
+        {
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             try
-            {   
-                if(articulo == null)
-                    articulo = new Articulo();
+            {
+                if (articulo == null)
+                articulo = new Articulo();
                 articulo.Codigo = txtCodigo.Text;
                 articulo.Nombre = txtNombre.Text;
                 articulo.Descripcion = txtDescripcion.Text;
@@ -52,27 +52,49 @@ namespace Desafio_Final
                 articulo.TipoMarca = (Marca)cboMarca.SelectedItem;
                 articulo.TipoCategoria = (Categoria)cboCategoria.SelectedItem;
 
-                if(articulo.Id != 0)
+                if (articulo.Id != 0)
                 {
                     negocio.modificar(articulo);
                     MessageBox.Show("Artículo modificado exitosamente.");
                 }
                 else
                 {
-                    negocio.agregar(articulo);
-                    MessageBox.Show("Artículo agregado exitosamente.");
+                    if (string.IsNullOrEmpty(txtCodigo.Text) || string.IsNullOrEmpty(txtNombre.Text))
+                    {
+                        MessageBox.Show("Debe completar Código y Nombre.");
+                    }
+                    else
+                    {
+                        negocio.agregar(articulo);
+                        MessageBox.Show("Artículo agregado exitosamente.");
+                    }
+
                 }
 
                 if (archivo != null && !(txtImagenUrl.Text.ToUpper().Contains("HTTP")))
                     File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
-                
+
                 Close();
+
             }
+            catch (FormatException ex) { MessageBox.Show("Campo Precio admite solo números y no puede estar vacío."); }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.ToString());
             }
+
+        }
+
+        private bool soloNumeros(string cadena)
+        {
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                    return false;
+            }
+
+            return true;
         }
 
         private void frmAltaArticulo_Load(object sender, EventArgs e)
@@ -105,7 +127,7 @@ namespace Desafio_Final
 
                 MessageBox.Show(ex.ToString());
             }
-        }       
+        }
 
         private void txtImagenUrl_Leave(object sender, EventArgs e)
         {
@@ -129,10 +151,38 @@ namespace Desafio_Final
         {
             OpenFileDialog archivo = new OpenFileDialog();
             archivo.Filter = "jpg|*.jpg;|png|*.png";
-            if(archivo.ShowDialog() == DialogResult.OK)
+            if (archivo.ShowDialog() == DialogResult.OK)
             {
                 txtImagenUrl.Text = archivo.FileName;
-                cargarImagen(archivo.FileName);                
+                cargarImagen(archivo.FileName);
+            }
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+            if (!(soloNumeros(txtPrecio.Text)))
+            {
+                MessageBox.Show("El campo precio admite solo números.");
+            }
+        }
+
+        private void txtCodigo_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtCodigo.Text) || string.IsNullOrEmpty(txtNombre.Text))
+            {
+                lblCodigoNull.Text = "* Campos obligatorios.";
+                lblNombreNull.Text = "*";
+                lblPrecioNull.Text = "*";                
+            }
+        }
+
+        private void txtNombre_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtCodigo.Text) || string.IsNullOrEmpty(txtNombre.Text))
+            {
+                lblCodigoNull.Text = "Campos obligatorios*.";
+                lblNombreNull.Text = "*";
+                lblPrecioNull.Text = "*";
             }
         }
     }

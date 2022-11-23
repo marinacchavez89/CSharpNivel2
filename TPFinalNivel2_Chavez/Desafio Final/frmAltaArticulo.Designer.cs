@@ -46,6 +46,9 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregarImagen = new System.Windows.Forms.Button();
+            this.lblCodigoNull = new System.Windows.Forms.Label();
+            this.lblNombreNull = new System.Windows.Forms.Label();
+            this.lblPrecioNull = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,6 +121,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(179, 22);
             this.txtCodigo.TabIndex = 0;
+            this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
             // 
             // txtNombre
             // 
@@ -125,6 +129,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(179, 22);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // txtDescripcion
             // 
@@ -147,6 +152,7 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(179, 22);
             this.txtPrecio.TabIndex = 6;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
             // cboMarca
             // 
@@ -205,11 +211,41 @@
             this.btnAgregarImagen.UseVisualStyleBackColor = true;
             this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
             // 
+            // lblCodigoNull
+            // 
+            this.lblCodigoNull.AutoSize = true;
+            this.lblCodigoNull.ForeColor = System.Drawing.Color.Red;
+            this.lblCodigoNull.Location = new System.Drawing.Point(304, 28);
+            this.lblCodigoNull.Name = "lblCodigoNull";
+            this.lblCodigoNull.Size = new System.Drawing.Size(0, 16);
+            this.lblCodigoNull.TabIndex = 16;
+            // 
+            // lblNombreNull
+            // 
+            this.lblNombreNull.AutoSize = true;
+            this.lblNombreNull.ForeColor = System.Drawing.Color.Red;
+            this.lblNombreNull.Location = new System.Drawing.Point(307, 65);
+            this.lblNombreNull.Name = "lblNombreNull";
+            this.lblNombreNull.Size = new System.Drawing.Size(0, 16);
+            this.lblNombreNull.TabIndex = 17;
+            // 
+            // lblPrecioNull
+            // 
+            this.lblPrecioNull.AutoSize = true;
+            this.lblPrecioNull.ForeColor = System.Drawing.Color.Red;
+            this.lblPrecioNull.Location = new System.Drawing.Point(304, 248);
+            this.lblPrecioNull.Name = "lblPrecioNull";
+            this.lblPrecioNull.Size = new System.Drawing.Size(0, 16);
+            this.lblPrecioNull.TabIndex = 18;
+            // 
             // frmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 435);
+            this.Controls.Add(this.lblPrecioNull);
+            this.Controls.Add(this.lblNombreNull);
+            this.Controls.Add(this.lblCodigoNull);
             this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -258,5 +294,8 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAgregarImagen;
+        private System.Windows.Forms.Label lblCodigoNull;
+        private System.Windows.Forms.Label lblNombreNull;
+        private System.Windows.Forms.Label lblPrecioNull;
     }
 }

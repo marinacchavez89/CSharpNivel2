@@ -13,7 +13,7 @@ using negocio;
 namespace Desafio_Final
 {
     public partial class frmArticulos : Form
-    {   
+    {
         private List<Articulo> listaArticulo;
         public frmArticulos()
         {
@@ -31,12 +31,12 @@ namespace Desafio_Final
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
-        {   
-            if(dgvArticulos.CurrentRow != null)
+        {
+            if (dgvArticulos.CurrentRow != null)
             {
                 Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
                 cargarImagen(seleccionado.ImagenUrl);
-            }            
+            }
         }
 
         private void cargar()
@@ -98,12 +98,18 @@ namespace Desafio_Final
             try
             {
                 DialogResult respuesta = MessageBox.Show("¿Desea eliminar el artículo seleccionado de forma permanente?", "ELIMINAR", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if(respuesta == DialogResult.Yes)
+                if (respuesta == DialogResult.Yes)
                 {
                     seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
                     negocio.eliminar(seleccionado.Id);
                     cargar();
-                }               
+                }
+
+            }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show("Debe seleccionar al menos un artículo para eliminar.");
+                cargar();
             }
             catch (Exception ex)
             {
@@ -134,13 +140,13 @@ namespace Desafio_Final
         private void cboCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
             string opcion = cboCampo.SelectedItem.ToString();
-            if(opcion == "Precio")
+            if (opcion == "Precio")
             {
                 cboCriterio.Items.Clear();
                 cboCriterio.Items.Add("Mayor a");
                 cboCriterio.Items.Add("Menor a");
                 cboCriterio.Items.Add("Igual a");
-                
+
             }
             else
             {
@@ -182,7 +188,7 @@ namespace Desafio_Final
 
         private bool soloNumeros(string cadena)
         {
-            foreach(char caracter in cadena)
+            foreach (char caracter in cadena)
             {
                 if (!(char.IsNumber(caracter)))
                     return false;
@@ -194,7 +200,8 @@ namespace Desafio_Final
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
-            {   if (validarFiltro())
+            {
+                if (validarFiltro())
                     return;
                 string campo = cboCampo.SelectedItem.ToString();
                 string criterio = cboCriterio.SelectedItem.ToString();
@@ -205,7 +212,7 @@ namespace Desafio_Final
             {
                 MessageBox.Show(ex.ToString());
             }
-            
+
         }
 
         private void btnVerDetalle_Click(object sender, EventArgs e)
@@ -225,8 +232,8 @@ namespace Desafio_Final
 
                 MessageBox.Show("Seleccione un articulo para ver el detalle, por favor");
             }
-            
-                       
+
+
         }
     }
 }
